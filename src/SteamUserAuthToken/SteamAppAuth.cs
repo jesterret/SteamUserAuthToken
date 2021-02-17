@@ -144,7 +144,7 @@ namespace SteamUserAuthToken
         /// </summary>
         /// <param name="callback">Application ownership ticket.</param>
         /// <param name="ticket">Generated auth ticket, or <see langword="null"/>.</param>
-        public AsyncJob<TicketAckCallback>? GetAuthSessionTIcket(SteamApps.AppOwnershipTicketCallback callback, out AppAuthTicket? ticket) => GetAuthSessionTicket(callback.AppID, callback.Ticket, out ticket);
+        public AsyncJob<TicketAckCallback>? GetAuthSessionTicket(SteamApps.AppOwnershipTicketCallback callback, out AppAuthTicket? ticket) => GetAuthSessionTicket(callback.AppID, callback.Ticket, out ticket);
 
         internal void CancelAuthTicket(AppAuthTicket authTicket)
         {
