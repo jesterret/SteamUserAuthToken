@@ -1,0 +1,35 @@
+name: Build, test and pack
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.*
+    - name: Build solution
+      run: dotnet build src/SteamUserAuthToken.sln --configuration Release 
+    - name: Run tests
+      run: dotnet test src/SteamUserAuthToken.sln --no-build --configuration Release
+
+  pack:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event_name == 'push'
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.*
+    - name: Pack
+      run: dotnet pack src/SteamUserAuthToken.sln --output ./artifacts --configuration Release
+    - uses: actions/upload-artifact@v1
+      with:
+        name: nupkg
+        path: ./artifacts
