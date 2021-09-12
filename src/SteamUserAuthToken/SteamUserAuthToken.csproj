@@ -3,12 +3,17 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Nullable>enable</Nullable>
+    <Description>Library providing generation of AuthSessionTicket, allowing to authenticate steam account with game servers.</Description>
+    <PackageTags>steam,steamkit,auth,GetAuthSessionTicket,AuthSessionTicket,ISteamUser.GetAuthSessionTicket</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Crc32.NET" Version="1.2.0" />
     <PackageReference Include="SteamKit2" Version="2.*" />
     <PackageReference Include="System.Memory" Version="4.5.4" />
+
+    <None Include="..\..\LICENSE.md" Pack="true" PackagePath="LICENSE.md"/>
+    <None Include="..\..\README.md" Pack="true" PackagePath="README.md"/>
   </ItemGroup>
 
 </Project>

@@ -12,6 +12,7 @@
     <Company>jesterret</Company>
     <Authors>jesterret</Authors>
     <PackageLicenseExpression>LGPL-2.1-or-later</PackageLicenseExpression>
+	<RepositoryUrl>https://github.com/jesterret/SteamUserAuthToken</RepositoryUrl>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>true</IncludeSymbols>
