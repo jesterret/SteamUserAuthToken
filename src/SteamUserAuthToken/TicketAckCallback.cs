@@ -1,7 +1,6 @@
-﻿using SteamKit2;
+﻿using System.Collections.Generic;
+using SteamKit2;
 using SteamKit2.Internal;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
 
 namespace SteamUserAuthToken
 {

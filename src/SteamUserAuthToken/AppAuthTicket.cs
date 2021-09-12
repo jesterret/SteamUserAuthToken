@@ -1,6 +1,5 @@
 ﻿using System;
 using Force.Crc32;
-using SteamKit2;
 
 namespace SteamUserAuthToken
 {
